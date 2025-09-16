@@ -1,4 +1,4 @@
-// Initialize AOS animations
+// Initialize AOS animations for smooth transitions
 AOS.init({
   duration: 800,
   once: true,
@@ -19,7 +19,7 @@ function setActiveLink(sectionId) {
   });
 }
 
-// Navigation links
+// Navigation links with click handling
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Hamburger menu toggle
+// Hamburger menu toggle for mobile navigation
 document.querySelector(".hamburger").addEventListener("click", () => {
   const nav = document.querySelector("nav ul");
   const hamburger = document.querySelector(".hamburger");
@@ -42,14 +42,14 @@ document.querySelector(".hamburger").addEventListener("click", () => {
   hamburger.innerHTML = `<i class="fas ${isOpen ? "fa-times" : "fa-bars"}"></i>`;
 });
 
-// Theme toggle
+// Theme toggle for light/dark mode
 document.querySelector(".theme-toggle").addEventListener("click", () => {
   document.body.dataset.theme = document.body.dataset.theme === "dark" ? "light" : "dark";
   const icon = document.querySelector(".theme-toggle i");
   icon.className = `fas ${document.body.dataset.theme === "dark" ? "fa-sun" : "fa-moon"}`;
 });
 
-// Form validation and submission
+// Contact form validation and submission
 document.getElementById("contact-form").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -97,16 +97,6 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   }
 });
 
-// Keyboard navigation for accessibility
-document.querySelectorAll("button, a, input, textarea").forEach((el) => {
-  el.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      el.click();
-    }
-  });
-});
-
 // Intersection Observer for active state on scroll
 const sections = document.querySelectorAll("section[id]");
 const observerOptions = {
@@ -126,34 +116,69 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
-// toggle chat
+// Chat widget functionality
+const chatbox = document.getElementById("chatbox");
+const chatToggle = document.getElementById("chatToggle");
+const sendButton = document.getElementById("sendButton");
+const chatInput = document.getElementById("chatInput");
+const chatBody = document.getElementById("chatBody");
+
+// Toggle chatbox visibility
 function toggleChat() {
-    const chatbox = document.getElementById('chatbox');
-    chatbox.style.display = chatbox.style.display === "flex" ? "none" : "flex";
+  const isOpen = chatbox.style.display === "flex";
+  chatbox.style.display = isOpen ? "none" : "flex";
+  chatToggle.setAttribute("aria-expanded", !isOpen);
+  if (!isOpen) {
+    chatInput.focus(); // Focus input when opening chat
+  }
 }
 
-// chat widget - send message
+// Send message and handle bot response
 function sendMessage() {
-    const input = document.getElementById('chatInput');
-    const body = document.getElementById('chatBody');
-    const text = input.value.trim();
+  const message = chatInput.value.trim();
 
-    if(text) {
-        let _userMsg = document.createElement('div'); // create a user-msg element
-        _userMsg.className = "chat-message user";
-        _userMsg.textContent = text;
-        body.appendChild(_userMsg);
+  if (message) {
+    // Create user message element
+    const userMessage = document.createElement("div");
+    userMessage.classList.add("chat-message", "user");
+    userMessage.textContent = message;
+    chatBody.appendChild(userMessage);
 
-        // implementation bot reply
-        setTimeout(() => {
-            let _botMsg = document.createElement('div');
-            _botMsg.className = "chat-message bot";
-            _botMsg.textContent = "✅ Thanks for your message! Our team will reply shortly.";
-            body.appendChild(_botMsg);
-            body.scrollTop = body.scrollHeight;
-        }, 1000);
+    // Clear input
+    chatInput.value = "";
 
-        input.value = "";
-        body.scrollTop = body.scrollHeight;
-    }
+    // Scroll to latest message
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Simulate bot response
+    setTimeout(() => {
+      const botMessage = document.createElement("div");
+      botMessage.classList.add("chat-message", "bot");
+      botMessage.textContent = "✅ Thanks for your message! Our team will reply shortly.";
+      chatBody.appendChild(botMessage);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1000);
+  }
 }
+
+// Event listeners for chat
+chatToggle.addEventListener("click", toggleChat);
+sendButton.addEventListener("click", sendMessage);
+
+// Send message with Enter key
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault(); // Prevent line break
+    sendMessage();
+  }
+});
+
+// Keyboard navigation for accessibility
+document.querySelectorAll("button, a, input, textarea").forEach((el) => {
+  el.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      el.click();
+    }
+  });
+});
