@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Solutions</title>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <h1>e-com solutions</h1>
+    <nav aria-label="Main navigation">
+      <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul>
+        <li><a href="#home" class="nav-link" aria-label="Navigate to Home">Home</a></li>
+        <li><a href="#features" class="nav-link" aria-label="Navigate to Features">Features</a></li>
+        <li><a href="#testimonials" class="nav-link" aria-label="Navigate to Testimonials">Testimonials</a></li>
+        <!-- <li><a href="#about" class="nav-link" aria-label="Navigate to About">About</a></li> -->
+        <li><a href="#contact" class="nav-link" aria-label="Navigate to Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" role="region" aria-label="Hero section">
+    <div class="hero-content">
+      <h2>Your Complete E-Commerce Solution</h2>
+      <p>Launch, manage, and scale your online store with ease.</p>
+      <button onclick="scrollToSection('features')" class="hero-btn" aria-label="Get started with E-Commerce Solutions">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features" role="region" aria-label="Features section">
+    <h2>Our Features</h2>
+    <div class="feature-container">
+      <div class="feature" data-aos="fade-up">
+        <i class="fas fa-rocket"></i>
+        <h3>Easy Setup</h3>
+        <p>Launch your store in minutes with our intuitive platform.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure Payments</h3>
+        <p>Accept multiple payment methods with top security.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-chart-line"></i>
+        <h3>Analytics</h3>
+        <p>Track sales and customers with built-in analytics tools.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>Our experts are always here to help you succeed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials" role="region" aria-label="Testimonials section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial" data-aos="fade-right">
+        <p>"E-Com Solutions transformed our online business! The setup was incredibly easy."</p>
+        <h4>Jane Doe, CEO</h4>
+      </div>
+      <div class="testimonial" data-aos="fade-left" data-aos-delay="100">
+        <p>"The analytics tools provided invaluable insights for our growth."</p>
+        <h4>John Smith, Founder</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" role="region" aria-label="Contact section">
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required aria-describedby="name-error">
+        <span class="error-message" id="name-error"></span>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required aria-describedby="email-error">
+        <span class="error-message" id="email-error"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="message" placeholder="Your Message" required aria-describedby="message-error"></textarea>
+        <span class="error-message" id="message-error"></span>
+      </div>
+      <button type="submit" id="submit-btn">Send Message</button>
+      <div class="loader hidden" id="form-loader" aria-hidden="true"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>© 2025 E-Com Solutions | Built with ❤️</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <!-- <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a> -->
+
+  <div class="whatsapp-float" onclick="toggleChat()">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <!-- Chat widget -->
+   <div class="chatbox" id="chatbox">
+    <div class="chat-header">Ubizo iMarket - chat Support</div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-message bot">
+            👋 Hi there! How can we help you today?
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" name="text" id="chatInput" placeholder="Type a message">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
