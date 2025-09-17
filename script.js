@@ -133,31 +133,56 @@ function toggleChat() {
   }
 }
 
-// Send message and handle bot response
-function sendMessage() {
+// Append message to chat
+function appendMessage(sender, message) {
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("chat-message", sender);
+  messageElement.textContent = message;
+  chatBody.appendChild(messageElement);
+  chatBody.scrollTop = chatBody.scrollHeight; // Scroll to latest message
+}
+
+// Send message to backend and get response
+async function sendMessage() {
   const message = chatInput.value.trim();
+  if (!message) return; // Do not send empty messages
 
-  if (message) {
-    // Create user message element
-    const userMessage = document.createElement("div");
-    userMessage.classList.add("chat-message", "user");
-    userMessage.textContent = message;
-    chatBody.appendChild(userMessage);
+  // Display user message
+  appendMessage("user", message);
+  chatInput.value = "";
+  chatInput.disabled = true;
+  sendButton.disabled = true;
 
-    // Clear input
-    chatInput.value = "";
-
-    // Scroll to latest message
+  try {
+    // Show temporary typing/loading message
+    const typingMessage = document.createElement("div");
+    typingMessage.classList.add("chat-message", "bot", "typing");
+    typingMessage.textContent = "Typing...";
+    chatBody.appendChild(typingMessage);
     chatBody.scrollTop = chatBody.scrollHeight;
 
-    // Simulate bot response
-    setTimeout(() => {
-      const botMessage = document.createElement("div");
-      botMessage.classList.add("chat-message", "bot");
-      botMessage.textContent = "✅ Thanks for your message! Our team will reply shortly.";
-      chatBody.appendChild(botMessage);
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 1000);
+    const response = await fetch("http://127.0.0.1:5000/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message }),
+    });
+
+    const data = await response.json();
+    
+    // Remove typing message
+    chatBody.removeChild(typingMessage);
+
+    // Display bot response
+    appendMessage("bot", data.response);
+    chatInput.disabled = false;
+    sendButton.disabled = false;
+    chatInput.focus();
+  } catch (error) {
+    console.error("Error:", error);
+    appendMessage("bot", "Sorry, there was an error. Please try again later.");
+    chatInput.disabled = false;
+    sendButton.disabled = false;
+    chatInput.focus();
   }
 }
 
@@ -173,8 +198,8 @@ chatInput.addEventListener("keydown", (e) => {
   }
 });
 
-// Keyboard navigation for accessibility
-document.querySelectorAll("button, a, input, textarea").forEach((el) => {
+// Keyboard navigation for accessibility, Enter only
+document.querySelectorAll("button:not(#sendButton), a, input:not(#chatInput), textarea:not(#chatInput)").forEach((el) => {
   el.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
