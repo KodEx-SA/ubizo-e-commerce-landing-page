@@ -1,0 +1,6 @@
+Flask
+Flask-cors
+torch
+torchvision
+nltk
+numpy

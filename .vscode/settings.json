@@ -1,6 +1,20 @@
 {
     "cSpell.words": [
+        "Amina",
+        "Ccircle",
         "chatbox",
+        "Csvg",
+        "Flutterwave",
+        "jsonify",
+        "nltk",
+        "numpy",
+        "Paystack",
+        "Pesa",
+        "punkt",
+        "Thabo",
+        "torchvision",
         "Ubizo"
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }

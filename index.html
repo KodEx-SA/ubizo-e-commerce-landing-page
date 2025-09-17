@@ -15,122 +15,231 @@
 <body>
     <!-- Header -->
     <header role="banner">
-        <h1>E-Com Solutions</h1>
+        <div class="header-inner">
+            <div class="logo" aria-label="Ubizo iMarket logo" tabindex="0">
+              Ubizo <span class="logo-accent">iMarket</span>
+            </div>
+        </div>
+
         <nav aria-label="Main navigation">
             <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
+
             <ul>
                 <li><a href="#home" class="nav-link" aria-label="Navigate to Home">Home</a></li>
+                <li><a href="#how" class="nav-link" aria-label="Navigate to How It Works">How It Works</a></li>
                 <li><a href="#features" class="nav-link" aria-label="Navigate to Features">Features</a></li>
                 <li><a href="#testimonials" class="nav-link" aria-label="Navigate to Testimonials">Testimonials</a></li>
+                <!-- <li><a href="#sellers" class="nav-link" aria-label="Navigate to For Sellers">For Sellers</a></li>
+                <li><a href="#buyers" class="nav-link" aria-label="Navigate to For Buyers">For Buyers</a></li> -->
                 <li><a href="#contact" class="nav-link" aria-label="Navigate to Contact">Contact</a></li>
             </ul>
         </nav>
+
+      <div class="header-actions">
         <button class="theme-toggle" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
         </button>
+        <a href="#signup" class="cta-btn" role="button">Get Started</a>
+      </div>
     </header>
 
     <!-- Hero -->
-    <section class="hero" id="home" role="region" aria-label="Hero section">
-        <div class="hero-content">
-            <h2>Your Complete E-Commerce Solution</h2>
-            <p>Launch, manage, and scale your online store with ease.</p>
-            <button onclick="scrollToSection('features')" class="hero-btn"
-                aria-label="Get started with E-Commerce Solutions">Get Started</button>
+    <section id="home" class="hero" role="region" aria-label="Hero section">
+      <div class="container hero-grid">
+        <div class="hero-left" data-aos="fade-right">
+          <h1>Empowering Local Entrepreneurs</h1>
+          <p class="lead">Connect buyers and sellers across South Africa on one powerful platform.</p>
+          <div class="hero-ctas">
+            <a href="#signup" class="btn btn-primary">Join as Seller</a>
+            <a href="#market" class="btn btn-secondary">Browse Marketplace</a>
+          </div>
         </div>
+  
+        <div class="hero-right" data-aos="fade-left" aria-hidden="false">
+          <!-- placeholder mockup - replace with real phone mockups in images/ -->
+          <img src="images/hero-mockup.png" alt="App preview showing seller and buyer screens" class="hero-mockup">
+        </div>
+      </div>
     </section>
 
-    <!-- Features -->
-    <section class="features" id="features" role="region" aria-label="Features section">
-        <h2>Our Features</h2>
-        <div class="feature-container">
-            <div class="feature" data-aos="fade-up">
-                <i class="fas fa-rocket"></i>
-                <h3>Easy Setup</h3>
-                <p>Launch your store in minutes with our intuitive platform.</p>
-            </div>
-            <div class="feature" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Secure Payments</h3>
-                <p>Accept multiple payment methods with top security.</p>
-            </div>
-            <div class="feature" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-chart-line"></i>
-                <h3>Analytics</h3>
-                <p>Track sales and customers with built-in analytics tools.</p>
-            </div>
-            <div class="feature" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-headset"></i>
-                <h3>24/7 Support</h3>
-                <p>Our experts are always here to help you succeed.</p>
-            </div>
+    <!-- How It Works -->
+    <section id="how" class="how-it-works" role="region" aria-label="How it works">
+      <div class="container">
+        <h2 data-aos="fade-up">How It Works</h2>
+        <div class="steps" data-aos="fade-up" data-aos-delay="120">
+          <article class="step">
+            <div class="step-icon"><i class="fas fa-user-plus" aria-hidden="true"></i></div>
+            <h3>Sign Up</h3>
+            <p>Create your free account and set up your seller profile.</p>
+          </article>
+  
+          <article class="step">
+            <div class="step-icon"><i class="fas fa-store" aria-hidden="true"></i></div>
+            <h3>List or Shop</h3>
+            <p>Sellers list items; buyers discover and purchase easily.</p>
+          </article>
+  
+          <article class="step">
+            <div class="step-icon"><i class="fas fa-truck" aria-hidden="true"></i></div>
+            <h3>Deliver & Earn</h3>
+            <p>Integrated booking & delivery — sellers earn more, faster.</p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <!-- Features (alternating) -->
+    <section id="features" class="features-section" role="region" aria-label="Features">
+      <div class="container">
+        <h2 data-aos="fade-up">Features</h2>
+  
+        <div class="feature" id="feature" data-aos="fade-right">
+          <div class="feature-media"><img src="images/payments.webp" alt="Secure payments"></div>
+          <div class="feature-body">
+            <h3>Fast & Secure Payments</h3>
+            <p>Integrated with local payment providers (M-Pesa, Paystack, Flutterwave) and major cards.</p>
+          </div>
+        </div>
+  
+        <div class="feature reverse" data-aos="fade-left">
+          <div class="feature-media"><img src="images/delivery.jpg" alt="Delivery tracking"></div>
+          <div class="feature-body">
+            <h3>Real-time Delivery Tracking</h3>
+            <p>Track pickups, drivers and deliveries from seller dashboard to buyer doorstep.</p>
+          </div>
+        </div>
+  
+        <div class="feature" data-aos="fade-right">
+          <div class="feature-media"><img src="images/chat.jpg" alt="Built-in chat"></div>
+          <div class="feature-body">
+            <h3>Built-in Buyer–Seller Chat</h3>
+            <p>Secure, fast messaging to agree details, negotiate, and build trust.</p>
+          </div>
+        </div>
+  
+        <div class="feature reverse" data-aos="fade-left">
+          <div class="feature-media"><img src="images/reviews.webp" alt="Ratings"></div>
+          <div class="feature-body">
+            <h3>Ratings & Reviews</h3>
+            <p>Build reputation with verified reviews and performance metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits / Value prop -->
+    <section class="benefits" role="region" aria-label="Benefits">
+      <div class="container benefits-grid" data-aos="fade-up">
+        <div class="benefit">💡 Create income from your phone</div>
+        <div class="benefit">🚀 Zero upfront costs to join</div>
+        <div class="benefit">🌍 Reach thousands of local buyers</div>
+        <div class="benefit">🤝 Support the local economy</div>
+      </div>
+    </section>
+  
+    <!-- CTA Banner -->
+    <section class="cta-banner" role="region" aria-label="Call to action">
+      <div class="container">
+        <h2>Ready to grow your business?</h2>
+        <a href="#signup" class="btn btn-primary large">Get Started Now</a>
+      </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials" role="region" aria-label="Testimonials section">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-container">
-            <div class="testimonial" data-aos="fade-right">
-                <p>"E-Com Solutions transformed our online business! The setup was incredibly easy."</p>
-                <h4>Jane Doe, CEO</h4>
-            </div>
-            <div class="testimonial" data-aos="fade-left" data-aos-delay="100">
-                <p>"The analytics tools provided invaluable insights for our growth."</p>
-                <h4>John Smith, Founder</h4>
-            </div>
+    <section id="testimonials" class="testimonials" role="region" aria-label="Testimonials">
+      <div class="container">
+        <h2 data-aos="fade-up">Success Stories</h2>
+        <div class="testimonials-grid" data-aos="fade-up" data-aos-delay="120">
+          <blockquote class="testimonial">
+            <img src="images/dave.webp" alt="Dave, Lagos" class="testimonial-photo">
+            <p>“Ubizo iMarket helped me reach more customers than ever. I earned R10,000 in my first month!”</p>
+            <cite>- Dave, Lagos</cite>
+          </blockquote>
+  
+          <blockquote class="testimonial">
+            <img src="images/john.webp" alt="John, Johannesburg" class="testimonial-photo">
+            <p>“From my phone, I run a full-time business thanks to Ubizo. Simple and powerful.”</p>
+            <cite>- John, Johannesburg</cite>
+          </blockquote>
         </div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section class="contact" id="contact" role="region" aria-label="Contact section">
+    <section id="contact" class="contact" role="region" aria-label="Contact">
+      <div class="container">
         <h2>Contact Us</h2>
-        <form id="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Your Name" required aria-describedby="name-error">
-                <span class="error-message" id="name-error"></span>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="Your Email" required aria-describedby="email-error">
-                <span class="error-message" id="email-error"></span>
-            </div>
-            <div class="form-group">
-                <textarea id="message" placeholder="Your Message" required aria-describedby="message-error"></textarea>
-                <span class="error-message" id="message-error"></span>
-            </div>
-            <button type="submit" id="submit-btn">Send Message</button>
-            <div class="loader hidden" id="form-loader" aria-hidden="true"></div>
+        <form id="contact-form" aria-label="Contact form">
+          <div class="form-row">
+            <input id="name" name="name" placeholder="Your name" aria-describedby="name-error" required>
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-row">
+            <input id="email" name="email" type="email" placeholder="Your email" aria-describedby="email-error" required>
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-row">
+            <textarea id="message" name="message" placeholder="Your message" aria-describedby="message-error" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+  
+          <div class="form-actions">
+            <button id="submit-btn" type="submit" class="btn btn-primary">Send Message</button>
+            <div id="form-loader" class="loader hidden" aria-hidden="true"></div>
+          </div>
         </form>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer role="contentinfo">
-        <p>© 2025 E-Com Solutions | Built with ❤️</p>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons" aria-hidden="false">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Ubizo iMarket. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <button class="whatsapp-float" id="chatToggle" aria-label="Toggle chat support">
-        <i class="fab fa-whatsapp"></i>
+    <button id="chatToggle" class="whatsapp-float" aria-label="Toggle chat support" title="Chat with Ubizo support">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </button>
 
     <!-- Chat Widget -->
-    <div class="chatbox" id="chatbox" role="dialog" aria-label="Chat support">
-        <div class="chat-header">Ubizo iMarket - Chat Support</div>
-        <div class="chat-body" id="chatBody">
+    <div id="chatbox" class="chatbox" role="dialog" aria-label="Chat support" aria-hidden="true">
+        <div class="chat-header">
+            Ubizo iMarket - Chat Support
+        </div>
+        <div id="chatBody" class="chat-body">
             <div class="chat-message bot">
                 👋 Hi there! How can we help you today?
             </div>
         </div>
         <div class="chat-input">
-            <input type="text" id="chatInput" placeholder="Type a message" aria-label="Type your message">
-            <button id="sendButton" aria-label="Send message">➤</button>
+          <input id="chatInput" type="text" aria-label="Type your message" placeholder="Type a message">
+          <button id="sendButton" aria-label="Send message">➤</button>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
+    <script>
+        // init AOS
+        AOS.init({ duration: 750, once: true });
+        // ensure dark/light theme default
+        if (!document.body.dataset.theme) document.body.dataset.theme = 'light';
+    </script>
 </body>
 
 </html>
