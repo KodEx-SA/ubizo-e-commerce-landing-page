@@ -7,7 +7,7 @@ CORS(app)  # enable CORS for all routes
 
 @app.route("/", methods=["GET"])
 def home():
-    return jsonify({"message": "Welcome, I am Smith, your virtual assistant. How can I assist you today?"})
+    return jsonify({"message": "Welcome, I am your virtual assistant. How can I assist you today?"})
 
 @app.route("/predict", methods=["POST"])
 def predict():
