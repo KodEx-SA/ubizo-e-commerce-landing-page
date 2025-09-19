@@ -54,7 +54,7 @@ def get_response(msg):
             available_topics.append(f"- {intent['tag'].capitalize()}")
 
     guidance = (
-        "🤔 Hmm, I didn’t quite get that.\n\n"
+        "🤔 Hmm, I didn't quite get that.\n\n"
         "Here are some things you can ask me about:\n"
         f"{chr(10).join(available_topics)}\n\n"
         "Try rephrasing your question or pick one of the topics above."
