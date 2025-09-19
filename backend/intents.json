@@ -41,16 +41,16 @@
       "patterns": ["How do I get started?", "Where do I sign up?", "Join now?", "Start selling?", "Start buying?"],
       "responses": [
         "Click on 'Get Started' to create your account today!",
-        "Join Ubizo iMarket now – sign up as a seller or buyer.",
+        "Join Ubizo iMarket now - sign up as a seller or buyer.",
         "You can start selling or browsing the marketplace by registering with us."
       ]
     },
     {
       "tag": "hero",
-      "patterns": ["What is Ubizo iMarket?", "What do you do?", "Tell me about this platform", "What’s the goal?"],
+      "patterns": ["What is Ubizo iMarket?", "What do you do?", "Tell me about this platform", "What's the goal?"],
       "responses": [
         "Ubizo iMarket empowers local entrepreneurs by connecting buyers and sellers across South Africa.",
-        "We’re a platform where sellers can showcase products and buyers can discover and shop – all in one place.",
+        "We're a platform where sellers can showcase products and buyers can discover and shop - all in one place.",
         "Our mission: Empowering local entrepreneurs and supporting the South African economy."
       ]
     },
@@ -58,8 +58,8 @@
       "tag": "how_it_works",
       "patterns": ["How does it work?", "Explain steps", "How to use Ubizo iMarket?"],
       "responses": [
-        "It’s simple: 1) Sign Up for free. 2) List items or browse products. 3) Deliver & Earn through our integrated system.",
-        "Steps: Create your account → Post items or shop → Delivery and earnings managed in-app.",
+        "It's simple: 1) Sign Up for free. 2) List items or browse products. 3) Deliver & Earn through our integrated system.",
+        "Steps: Create your account -> Post items or shop -> Delivery and earnings managed in-app.",
         "Ubizo iMarket works in 3 steps: Sign Up, List or Shop, Deliver & Earn."
       ]
     },
@@ -83,20 +83,20 @@
     },
     {
       "tag": "buyer_info",
-      "patterns": ["I want to buy", "How do I shop?", "I’m a buyer", "Looking for products", "Where can I browse?"],
+      "patterns": ["I want to buy", "How do I shop?", "I'm a buyer", "Looking for products", "Where can I browse?"],
       "responses": [
         "As a buyer, you can browse the marketplace, chat directly with sellers, and track deliveries in real-time.",
         "Sign up as a buyer and discover products from local sellers near you.",
-        "To shop: Create your account → Browse products → Place your order → Track your delivery."
+        "To shop: Create your account, Browse products, Place your order and Track your delivery."
       ]
     },
     {
       "tag": "seller_info",
-      "patterns": ["I want to sell", "How do I sell?", "I’m a seller", "Post my products", "Earn money here"],
+      "patterns": ["I want to sell", "How do I sell?", "I'm a seller", "Post my products", "Earn money here"],
       "responses": [
         "As a seller, you can list your products for free, reach thousands of buyers, and get paid securely.",
         "Join as a seller to start posting your products and growing your business.",
-        "To sell: Create your account → Post your items → Deliver & Earn with integrated payments."
+        "To sell: Create your account, Post your items, Deliver & Earn with integrated payments."
       ]
     },
     {
@@ -104,7 +104,7 @@
       "patterns": ["Any success stories?", "Do people make money here?", "Show me testimonials", "Seller stories?"],
       "responses": [
         "One seller earned over R10,000 in their first month!",
-        "Many sellers share success stories – growing their income and customer base quickly.",
+        "Many sellers share success stories - growing their income and customer base quickly.",
         "Check out our testimonials section for seller stories and buyer reviews."
       ]
     },
@@ -131,7 +131,7 @@
       "patterns": ["Do you accept credit cards?", "Payment methods?", "How can I pay?", "Can I pay with card?", "Payment options?"],
       "responses": [
         "We accept credit cards, debit cards, and mobile-friendly options like PayPal.",
-        "Payments are fast and secure – you can use card or PayPal.",
+        "Payments are fast and secure - you can use card or PayPal.",
         "Ubizo iMarket supports debit, credit, and PayPal payments."
       ]
     },
@@ -158,7 +158,7 @@
       "patterns": ["Do you have social media?", "Facebook page?", "Instagram account?", "Follow you online?", "Socials?"],
       "responses": [
         "Yes, follow us on Facebook: https://facebook.com/ubizoimarket and Instagram: https://instagram.com/ubizoimarket.",
-        "We’re active on social media! Facebook: @ubizoimarket | Instagram: @ubizoimarket.",
+        "We're active on social media! Facebook: @ubizoimarket | Instagram: @ubizoimarket.",
         "Connect with us on Facebook (fb.com/ubizoimarket) and Instagram (ig.com/ubizoimarket)."
       ]
     }
