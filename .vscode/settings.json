@@ -15,7 +15,8 @@
         "Splide",
         "Thabo",
         "torchvision",
-        "Ubizo"
+        "Ubizo",
+        "ubizoimarket"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": []
