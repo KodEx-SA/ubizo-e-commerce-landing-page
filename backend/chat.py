@@ -46,10 +46,19 @@ def get_response(msg):
                 return random.choice(intent['responses'])
     
     # Fallback: Provide guidance on available topics
-    available_topics = [intent["tag"] for intent in intents['intents']]
-    guidance = f'''I'm sorry, I didn't understand that. 
-    Here are some topics I can help with: {', '.join(available_topics)}. 
-    Please rephrase your question or choose a topic.'''
+    available_topics = []
+    for intent in intents['intents']:
+        if "display_name" in intent:
+            available_topics.append(f"- {intent['display_name']}")
+        else:
+            available_topics.append(f"- {intent['tag'].capitalize()}")
+
+    guidance = (
+        "🤔 Hmm, I didn’t quite get that.\n\n"
+        "Here are some things you can ask me about:\n"
+        f"{chr(10).join(available_topics)}\n\n"
+        "Try rephrasing your question or pick one of the topics above."
+    )
     return guidance
 
 

@@ -2,6 +2,7 @@
   "intents": [
     {
       "tag": "greeting",
+      "display_name": "Greeting",
       "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "What's up?", "Howdy", "Hi there"],
       "responses": [
         "Hello! Welcome to Ubizo iMarket. How can I assist you today?",
@@ -11,6 +12,7 @@
     },
     {
       "tag": "goodbye",
+      "display_name": "Contact Info",
       "patterns": ["Bye", "See you later", "Goodbye", "Catch you later", "Talk to you soon"],
       "responses": [
         "Goodbye! Have a wonderful day.",
@@ -146,6 +148,7 @@
     },
     {
       "tag": "whatsapp_support",
+      "display_name": "WhatsApp Support",
       "patterns": ["Do you have WhatsApp?", "WhatsApp number?", "Can I chat on WhatsApp?", "Support on WhatsApp?", "WhatsApp contact?"],
       "responses": [
         "Yes! You can reach us on WhatsApp at +27 61 234 5678.",
@@ -155,6 +158,7 @@
     },
     {
       "tag": "social_media",
+      "display_name": "Social Media",
       "patterns": ["Do you have social media?", "Facebook page?", "Instagram account?", "Follow you online?", "Socials?"],
       "responses": [
         "Yes, follow us on Facebook: https://facebook.com/ubizoimarket and Instagram: https://instagram.com/ubizoimarket.",
