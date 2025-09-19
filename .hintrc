@@ -3,6 +3,10 @@
     "development"
   ],
   "hints": {
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "no-inline-styles": "off",
+    "compat-api/html": "off",
+    "compat-api/css": "off",
+    "css-prefix-order": "off"
   }
 }
