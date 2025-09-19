@@ -1,0 +1,86 @@
+🛒 Ubizo iMarket – Landing Page Layout
+Header
+
+Logo (top-left)
+
+Navigation (top-right):
+
+Home | How It Works | For Sellers | For Buyers | Contact
+
+CTA button: “Get Started” (highlighted, brand colour)
+
+Hero Section
+
+Goal: Instantly explain what the platform is and spark sign-ups.
+
+Left side:
+
+Headline: “Empowering Local Entrepreneurs”
+
+Subtext: “Connect buyers and sellers across South Africa on one powerful platform.”
+
+Primary CTA: Join as Seller
+
+Secondary CTA: Browse Marketplace
+
+Right side: Illustration or mockup of the app on phone screens (buyer + seller views)
+
+How It Works (3-Step Section)
+
+Horizontal 3-column layout:
+
+Sign Up – Create your free account
+
+List or Shop – Sellers post items; buyers browse
+
+Deliver & Earn – Integrated booking/delivery system
+
+Use icons or minimal line illustrations above each step.
+
+Features Section
+
+2-column layout (alternating image + text):
+
+Fast and secure payments
+
+Real-time delivery tracking
+
+Built-in chat between buyer & seller
+
+Ratings and reviews system
+
+Each feature has a small icon and a short description.
+
+Benefits / Value Proposition
+
+Full-width strip with 3–4 cards:
+
+“Create income from your phone”
+
+“Zero upfront costs to join”
+
+“Reach thousands of local buyers”
+
+“Support local economy”
+
+Call-to-Action Banner
+
+Bright section with bold headline:
+
+“Ready to grow your business?”
+
+Button: Get Started Now (links to sign-up)
+
+Testimonials / Success Stories
+
+Seller stories with photo, name, and short quote
+
+Show metrics (e.g. “Earned R10,000+ in first month”)
+
+Footer
+
+Quick links (About | Contact | Terms | Privacy)
+
+Social icons
+
+Copyright
