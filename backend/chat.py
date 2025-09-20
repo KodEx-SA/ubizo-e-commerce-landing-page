@@ -1,6 +1,5 @@
 import random
 import json
-
 import torch
 
 from model import NeuralNet
@@ -40,12 +39,20 @@ def get_response(msg):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
-    
-    # Fallback: Provide guidance on available topics
+                response_text = random.choice(intent['responses'])
+                
+                # If the intent has "options", include them
+                options = intent.get("options", [])
+                return {
+                    "response": response_text,
+                    "options": options
+                }
+
+    # --- Fallback: Provide guidance on available topics ---
     available_topics = []
     for intent in intents['intents']:
         if "display_name" in intent:
@@ -59,13 +66,15 @@ def get_response(msg):
         f"{chr(10).join(available_topics)}\n\n"
         "Try rephrasing your question or pick one of the topics above."
     )
-    return guidance
+    return {
+        "response": guidance,
+        "options": [{"label": topic, "action": "intent", "value": topic} for topic in available_topics]
+    }
 
 
 if __name__ == "__main__":
     print("Let's chat! (type 'quit' to exit)")
     while True:
-        # sentence = "do you use credit cards?"
         sentence = input("You: ")
         if sentence == "quit":
             break
