@@ -61,6 +61,111 @@
         {"label": "📘 Facebook", "action": "link", "value": "https://facebook.com/ubizoimarket"},
         {"label": "📸 Instagram", "action": "link", "value": "https://instagram.com/ubizoimarket"}
       ]
+    },
+    {
+      "tag": "landing_navigation",
+      "display_name": "Navigation",
+      "patterns": ["Show me menu", "Navigation", "What are the sections?", "Where can I go?"],
+      "responses": [
+        "Here's the Ubizo iMarket navigation 👇"
+      ],
+      "options": [
+        {"label": "🏠 Home", "action": "navigate", "value": "/"},
+        {"label": "⚙️ How It Works", "action": "intent", "value": "how_it_works"},
+        {"label": "🛍 For Buyers", "action": "intent", "value": "for_buyers"},
+        {"label": "📦 For Sellers", "action": "intent", "value": "for_sellers"},
+        {"label": "📞 Contact", "action": "intent", "value": "support"}
+      ]
+    },
+    {
+      "tag": "hero",
+      "display_name": "Hero Section",
+      "patterns": ["What is Ubizo iMarket?", "Tell me about Ubizo", "What's this platform?"],
+      "responses": [
+        "Ubizo iMarket empowers local entrepreneurs by connecting buyers and sellers across South Africa 🚀"
+      ],
+      "options": [
+        {"label": "🙋 Join as Seller", "action": "navigate", "value": "/sell"},
+        {"label": "🛒 Browse Marketplace", "action": "navigate", "value": "/shop"}
+      ]
+    },
+    {
+      "tag": "how_it_works",
+      "display_name": "How It Works",
+      "patterns": ["How does it work?", "Show me how it works", "Steps", "Guide me"],
+      "responses": [
+        "Ubizo iMarket works in 3 easy steps 👇"
+      ],
+      "options": [
+        {"label": "1️⃣ Sign Up", "action": "info", "value": "Create your free account"},
+        {"label": "2️⃣ List or Shop", "action": "info", "value": "Sellers post items, buyers browse"},
+        {"label": "3️⃣ Deliver & Earn", "action": "info", "value": "Integrated booking & delivery system"}
+      ]
+    },
+    {
+      "tag": "features",
+      "display_name": "Features",
+      "patterns": ["What are the features?", "Features", "What do I get?", "Platform tools"],
+      "responses": [
+        "Here are some powerful features of Ubizo iMarket ⚡"
+      ],
+      "options": [
+        {"label": "💳 Fast & Secure Payments", "action": "info", "value": "Safe transactions for peace of mind"},
+        {"label": "📦 Real-time Tracking", "action": "info", "value": "Track deliveries as they happen"},
+        {"label": "💬 Built-in Chat", "action": "info", "value": "Talk directly with buyers or sellers"},
+        {"label": "⭐ Ratings & Reviews", "action": "info", "value": "Build trust with feedback"}
+      ]
+    },
+    {
+      "tag": "benefits",
+      "display_name": "Benefits",
+      "patterns": ["Why use Ubizo?", "Benefits", "What's in it for me?", "Value"],
+      "responses": [
+        "Ubizo iMarket offers amazing benefits 👇"
+      ],
+      "options": [
+        {"label": "📱 Create income from your phone", "action": "info", "value": "Turn your phone into a business tool"},
+        {"label": "🚫 Zero upfront costs", "action": "info", "value": "No fees to start selling"},
+        {"label": "🌍 Reach local buyers", "action": "info", "value": "Thousands of buyers across SA"},
+        {"label": "🤝 Support local economy", "action": "info", "value": "Empower your community"}
+      ]
+    },
+    {
+      "tag": "cta",
+      "display_name": "Call To Action",
+      "patterns": ["How do I start?", "Sign up", "Get started", "I want to join"],
+      "responses": [
+        "Ready to grow your business? 🚀"
+      ],
+      "options": [
+        {"label": "👉 Get Started Now", "action": "navigate", "value": "/signup"}
+      ]
+    },
+    {
+      "tag": "testimonials",
+      "display_name": "Testimonials",
+      "patterns": ["Success stories", "Testimonials", "What do others say?", "Reviews"],
+      "responses": [
+        "Here are some success stories from our sellers 🌟"
+      ],
+      "options": [
+        {"label": "📈 Earned R10,000+ in first month", "action": "info", "value": "Example seller results"},
+        {"label": "😊 Happy Buyers", "action": "info", "value": "Positive experiences shared"}
+      ]
+    },
+    {
+      "tag": "footer",
+      "display_name": "Footer",
+      "patterns": ["Footer", "Links", "Policies", "Legal", "Terms", "Privacy"],
+      "responses": [
+        "Here are quick links from the footer 👇"
+      ],
+      "options": [
+        {"label": "ℹ️ About", "action": "navigate", "value": "/about"},
+        {"label": "📞 Contact", "action": "intent", "value": "support"},
+        {"label": "📜 Terms", "action": "navigate", "value": "/terms"},
+        {"label": "🔒 Privacy", "action": "navigate", "value": "/privacy"}
+      ]
     }
   ]
 }
