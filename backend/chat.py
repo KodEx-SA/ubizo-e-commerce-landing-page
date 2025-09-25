@@ -55,20 +55,23 @@ def get_response(msg):
     # --- Fallback: Provide guidance on available topics ---
     available_topics = []
     for intent in intents['intents']:
-        if "display_name" in intent:
-            available_topics.append(f"- {intent['display_name']}")
-        else:
-            available_topics.append(f"- {intent['tag'].capitalize()}")
+        display_name = intent.get("display_name", intent["tag"].capitalize())
+        available_topics.append({
+            "label": display_name,
+            "action": "intent",
+            "value": intent["tag"]   # clean value for frontend
+        })
 
     guidance = (
         "🤔 Hmm, I didn't quite get that.\n\n"
         "Here are some things you can ask me about:\n"
-        f"{chr(10).join(available_topics)}\n\n"
+        f"{chr(10).join('- ' + t['label'] for t in available_topics)}\n\n"
         "Try rephrasing your question or pick one of the topics above."
     )
+
     return {
         "response": guidance,
-        "options": [{"label": topic, "action": "intent", "value": topic} for topic in available_topics]
+        "options": available_topics
     }
 
 
