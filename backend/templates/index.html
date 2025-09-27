@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Mobile responsiveness tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Solutions</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" as="font" crossorigin>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='assets/favicon/site.webmanifest') }}">
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+</head>
+<body>
+    <!-- Fixed Header with proper Bootstrap navbar structure -->
+    <header role="banner" class="header fixed-top">
+        <div class="container-fluid px-3 px-lg-4">
+            <div class="row align-items-center g-0">
+                <!-- Logo Column -->
+                <div class="col-auto pe-3 pe-lg-4">
+                    <div class="header-inner">
+                        <a href="#home" class="logo d-inline-block" aria-label="Ubizo iMarket logo" tabindex="0">
+                            Ubizo <span class="logo-accent">iMarket</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation Column -->
+                <div class="col px-0">
+                    <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark">
+                        <!-- Mobile hamburger button -->
+                        <button class="hamburger navbar-toggler border-0 p-2" type="button" aria-label="Toggle navigation menu" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <i class="fas fa-bars fs-4"></i>
+                        </button>
+                        <!-- Desktop Navigation -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home" aria-label="Navigate to Home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#how" aria-label="Navigate to How It Works">How It Works</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#features" aria-label="Navigate to Features">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#testimonials" aria-label="Navigate to Testimonials">Testimonials</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact" aria-label="Navigate to Contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Actions Column -->
+                <div class="col-auto ps-3 ps-lg-4">
+                    <div class="header-actions d-flex align-items-center gap-2 gap-lg-3">
+                        <!-- Theme Toggle -->
+                        <button class="theme-toggle btn btn-outline-light rounded-circle p-2" aria-label="Toggle dark mode" type="button">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </button>
+                        <!-- CTA Button -->
+                        <a href="#contact" class="cta-btn btn btn-warning fw-semibold px-4 py-2" role="button">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section - Full viewport height with proper alignment -->
+    <section id="home" class="hero position-relative overflow-hidden" role="region" aria-label="Hero section">
+        <!-- Animated background pattern -->
+        <div class="hero-background position-absolute w-100 h-100 d-none d-lg-block"></div>
+        <!-- Main content container -->
+        <div class="container-fluid px-3 px-lg-4">
+            <div class="row align-items-center min-vh-100 g-0 g-lg-5">
+                <!-- Left content column -->
+                <div class="col-lg-6 order-lg-1 order-2 pb-4 pb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="hero-content text-start text-lg-start">
+                        <h1 class="hero-title display-3 fw-bold mb-4 mb-lg-3 lh-1">
+                            Empowering Local Entrepreneurs
+                        </h1>
+                        <p class="lead fs-5 text-white-75 mb-4 mb-lg-5 lh-lg">
+                            Connect buyers and sellers across South Africa on one powerful platform.
+                        </p>
+                        <div class="hero-ctas d-flex flex-wrap gap-3 justify-content-start justify-content-lg-start">
+                            <a href="#signup" class="btn btn-primary btn-lg px-4 py-3 fw-semibold rounded-pill hero-btn">
+                                <i class="fas fa-user-plus me-2"></i>Join as Seller
+                            </a>
+                            <a href="#market" class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold rounded-pill hero-btn">
+                                <i class="fas fa-store me-2"></i>Browse Marketplace
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right mockup column -->
+                <div class="col-lg-6 order-lg-2 order-1 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero-mockup-wrapper position-relative d-inline-block">
+                        <div class="mockup-glow position-absolute rounded-4"></div>
+                        <img src="{{ url_for('static', filename='images/hero-mockup.png') }}" alt="App preview showing seller and buyer screens" class="hero-mockup img-fluid rounded-4 shadow-lg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How It Works Section - Consistent spacing and alignment -->
+    <section id="how" class="how-it-works section-padding" role="region" aria-label="How it works">
+        <div class="container">
+            <!-- Section header -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center mb-5">
+                    <h2 class="section-title display-5 fw-bold mb-3" data-aos="fade-up">
+                        How It Works
+                    </h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                </div>
+            </div>
+            <!-- Steps content -->
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="step-card h-100 position-relative text-center p-4 p-lg-5 rounded-3 bg-white shadow-sm">
+                        <div class="step-icon position-absolute top-0 start-50 translate-middle-x rounded-circle d-flex align-items-center justify-content-center mb-4">
+                            <i class="fas fa-user-plus text-white fs-4"></i>
+                        </div>
+                        <div class="step-content pt-5">
+                            <h3 class="h4 fw-semibold mb-3 text-dark">Sign Up</h3>
+                            <p class="text-muted mb-0 lh-lg">Create your free account and set up your seller profile in minutes.</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="step-card h-100 position-relative text-center p-4 p-lg-5 rounded-3 bg-white shadow-sm">
+                        <div class="step-icon position-absolute top-0 start-50 translate-middle-x rounded-circle d-flex align-items-center justify-content-center mb-4 bg-primary">
+                            <i class="fas fa-store text-white fs-4"></i>
+                        </div>
+                        <div class="step-content pt-5">
+                            <h3 class="h4 fw-semibold mb-3 text-dark">List or Shop</h3>
+                            <p class="text-muted mb-0 lh-lg">Sellers list items easily; buyers discover and purchase with confidence.</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="step-card h-100 position-relative text-center p-4 p-lg-5 rounded-3 bg-white shadow-sm">
+                        <div class="step-icon position-absolute top-0 start-50 translate-middle-x rounded-circle d-flex align-items-center justify-content-center mb-4 bg-success">
+                            <i class="fas fa-truck text-white fs-4"></i>
+                        </div>
+                        <div class="step-content pt-5">
+                            <h3 class="h4 fw-semibold mb-3 text-dark">Deliver & Earn</h3>
+                            <p class="text-muted mb-0 lh-lg">Integrated booking & delivery system—sellers earn more, faster.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section - Alternating layout with proper alignment -->
+    <section id="features" class="features-section section-padding bg-light" role="region" aria-label="Features">
+        <div class="container">
+            <!-- Section header -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center mb-5">
+                    <h2 class="section-title display-5 fw-bold mb-3" data-aos="fade-up">
+                        Powerful Features
+                    </h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="lead text-muted">Everything you need to succeed in the local marketplace</p>
+                </div>
+            </div>
+            <!-- Feature 1: Payments -->
+            <div class="row align-items-center g-5 mb-5" data-aos="fade-right">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="feature-content">
+                        <span class="feature-badge badge bg-primary rounded-pill mb-3">Secure & Fast</span>
+                        <h3 class="display-6 fw-bold mb-3 lh-1">Fast & Secure Payments</h3>
+                        <p class="lead text-muted mb-4 lh-lg">Integrated with local payment providers (M-Pesa, Paystack, Flutterwave) and major cards for seamless transactions.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Instant payouts to your account</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Multiple payment options</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Bank-level security</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 text-center">
+                    <div class="feature-image-wrapper position-relative">
+                        <img src="{{ url_for('static', filename='images/payments.webp') }}" alt="Secure payment processing interface" class="img-fluid rounded-3 shadow-lg feature-image" loading="lazy">
+                        <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2: Delivery - Reverse layout -->
+            <div class="row align-items-center g-5 flex-row-reverse flex-lg-row-reverse mb-5" data-aos="fade-left" data-aos-delay="100">
+                <div class="col-lg-6">
+                    <div class="feature-content">
+                        <span class="feature-badge badge bg-success rounded-pill mb-3">Real-time Tracking</span>
+                        <h3 class="display-6 fw-bold mb-3 lh-1">Real-time Delivery Tracking</h3>
+                        <p class="lead text-muted mb-4 lh-lg">Track pickups, drivers and deliveries from seller dashboard to buyer doorstep with live updates.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>GPS tracking for all deliveries</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>ETA notifications</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Proof of delivery photos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="feature-image-wrapper position-relative">
+                        <img src="{{ url_for('static', filename='images/delivery.jpg') }}" alt="Real-time delivery tracking dashboard" class="img-fluid rounded-3 shadow-lg feature-image" loading="lazy">
+                        <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3: Chat -->
+            <div class="row align-items-center g-5 mb-5" data-aos="fade-right" data-aos-delay="200">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="feature-content">
+                        <span class="feature-badge badge bg-info rounded-pill mb-3">Instant Communication</span>
+                        <h3 class="display-6 fw-bold mb-3 lh-1">Built-in Buyer–Seller Chat</h3>
+                        <p class="lead text-muted mb-4 lh-lg">Secure, fast messaging to agree details, negotiate prices, and build trust between buyers and sellers.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>End-to-end encryption</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Photo & file sharing</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Read receipts & typing indicators</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 text-center">
+                    <div class="feature-image-wrapper position-relative">
+                        <img src="{{ url_for('static', filename='images/chat.jpg') }}" alt="In-app messaging interface" class="img-fluid rounded-3 shadow-lg feature-image" loading="lazy">
+                        <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 4: Reviews - Reverse layout -->
+            <div class="row align-items-center g-5 flex-row-reverse flex-lg-row-reverse" data-aos="fade-left" data-aos-delay="300">
+                <div class="col-lg-6">
+                    <div class="feature-content">
+                        <span class="feature-badge badge bg-warning rounded-pill mb-3">Trust & Reputation</span>
+                        <h3 class="display-6 fw-bold mb-3 lh-1">Ratings & Reviews</h3>
+                        <p class="lead text-muted mb-4 lh-lg">Build reputation with verified reviews, performance metrics, and trust badges that showcase your reliability.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Verified buyer reviews</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Response rate badges</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                <span>Trust score calculations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="feature-image-wrapper position-relative">
+                        <img src="{{ url_for('static', filename='images/reviews.webp') }}" alt="Ratings and reviews system" class="img-fluid rounded-3 shadow-lg feature-image" loading="lazy">
+                        <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Benefits Section - Horizontal Carousel -->
+    <section class="benefits section-padding bg-white" role="region" aria-label="Benefits">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title display-6 fw-bold mb-3" data-aos="fade-up">
+                        Why Choose Ubizo iMarket?
+                    </h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="lead text-muted col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                        Everything you need to start, grow, and succeed in your local business
+                    </p>
+                </div>
+            </div>
+            <!-- Benefits Carousel -->
+            <div class="benefits-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="splide benefits-carousel" role="region" aria-label="Benefits carousel">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <!-- Benefit 1 -->
+                            <div class="splide__slide">
+                                <div class="benefit-card h-100 text-center p-4 rounded-3 bg-light border-0 shadow-sm position-relative overflow-hidden mx-2">
+                                    <div class="benefit-icon position-absolute top-0 start-50 translate-middle-x rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mb-3">
+                                        <span class="fs-3">💡</span>
+                                    </div>
+                                    <div class="benefit-content pt-5">
+                                        <h4 class="h5 fw-semibold mb-2 text-dark">Mobile-First Income</h4>
+                                        <p class="text-muted small mb-0">Create income from your phone anywhere, anytime</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Benefit 2 -->
+                            <div class="splide__slide">
+                                <div class="benefit-card h-100 text-center p-4 rounded-3 bg-light border-0 shadow-sm position-relative overflow-hidden mx-2">
+                                    <div class="benefit-icon position-absolute top-0 start-50 translate-middle-x rounded-circle bg-success text-white d-flex align-items-center justify-content-center mb-3">
+                                        <span class="fs-3">🚀</span>
+                                    </div>
+                                    <div class="benefit-content pt-5">
+                                        <h4 class="h5 fw-semibold mb-2 text-dark">Zero Upfront Costs</h4>
+                                        <p class="text-muted small mb-0">Start selling immediately with no setup fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Benefit 3 -->
+                            <div class="splide__slide">
+                                <div class="benefit-card h-100 text-center p-4 rounded-3 bg-light border-0 shadow-sm position-relative overflow-hidden mx-2">
+                                    <div class="benefit-icon position-absolute top-0 start-50 translate-middle-x rounded-circle bg-info text-white d-flex align-items-center justify-content-center mb-3">
+                                        <span class="fs-3">🌍</span>
+                                    </div>
+                                    <div class="benefit-content pt-5">
+                                        <h4 class="h5 fw-semibold mb-2 text-dark">Massive Local Reach</h4>
+                                        <p class="text-muted small mb-0">Connect with thousands of buyers in your area</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Benefit 4 -->
+                            <div class="splide__slide">
+                                <div class="benefit-card h-100 text-center p-4 rounded-3 bg-light border-0 shadow-sm position-relative overflow-hidden mx-2">
+                                    <div class="benefit-icon position-absolute top-0 start-50 translate-middle-x rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center mb-3">
+                                        <span class="fs-3">🤝</span>
+                                    </div>
+                                    <div class="benefit-content pt-5">
+                                        <h4 class="h5 fw-semibold mb-2 text-dark">Local Economy Boost</h4>
+                                        <p class="text-muted small mb-0">Support your community and local businesses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Banner Section - Centered and balanced -->
+    <section class="cta-banner section-padding position-relative overflow-hidden" role="region" aria-label="Call to action">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-xl-6">
+                    <h2 class="display-4 fw-bold mb-4 text-white" data-aos="zoom-in" data-aos-delay="100">
+                        Ready to grow your business?
+                    </h2>
+                    <p class="lead text-white-75 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
+                        Join thousands of local entrepreneurs already thriving with Ubizo iMarket
+                    </p>
+                    <div class="d-grid gap-3 col-lg-8 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-semibold fs-5 cta-btn">
+                            <i class="fas fa-rocket me-2"></i> Get Started Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section - Horizontal Carousel -->
+    <section id="testimonials" class="testimonials section-padding bg-light" role="region" aria-label="Testimonials">
+        <div class="container">
+            <!-- Section header -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center mb-5">
+                    <h2 class="section-title display-5 fw-bold mb-3" data-aos="fade-up">
+                        Success Stories
+                    </h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                        Don't just take our word for it—hear from real sellers making it happen
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonials Carousel -->
+            <div class="testimonials-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="splide testimonials-carousel" role="region" aria-label="Testimonials carousel">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <!-- Testimonial 1 -->
+                            <div class="splide__slide">
+                                <blockquote class="testimonial-card h-100 position-relative p-5 rounded-3 bg-white shadow-sm border-0 mx-2">
+                                    <div class="testimonial-photo position-absolute top-0 start-50 translate-middle-x rounded-circle border border-4 border-primary d-flex align-items-center justify-content-center mb-4">
+                                        <img src="{{ url_for('static', filename='images/dave.webp') }}" alt="Dave, Lagos" class="rounded-circle img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+                                    </div>
+                                    <div class="testimonial-content pt-5">
+                                        <p class="fs-5 text-muted italic mb-4 lh-lg">
+                                            "Ubizo iMarket helped me reach more customers than ever. I earned R10,000 in my first month! The platform is so easy to use and the support team is amazing."
+                                        </p>
+                                        <cite class="d-block fw-semibold text-primary fs-6">
+                                            <i class="fas fa-quote-left me-2"></i> Dave M., Lagos Seller
+                                        </cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="splide__slide">
+                                <blockquote class="testimonial-card h-100 position-relative p-5 rounded-3 bg-white shadow-sm border-0 mx-2">
+                                    <div class="testimonial-photo position-absolute top-0 start-50 translate-middle-x rounded-circle border border-4 border-success d-flex align-items-center justify-content-center mb-4">
+                                        <img src="{{ url_for('static', filename='images/john.webp') }}" alt="John, Johannesburg" class="rounded-circle img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+                                    </div>
+                                    <div class="testimonial-content pt-5">
+                                        <p class="fs-5 text-muted italic mb-4 lh-lg">
+                                            "From my phone, I run a full-time business thanks to Ubizo. The delivery tracking and payment system make everything so smooth. Highly recommend!"
+                                        </p>
+                                        <cite class="d-block fw-semibold text-success fs-6">
+                                            <i class="fas fa-quote-left me-2"></i> John S., Johannesburg Entrepreneur
+                                        </cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section - Centered form with proper spacing -->
+    <section id="contact" class="contact section-padding" role="region" aria-label="Contact">
+        <div class="container">
+            <!-- Section header -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center mb-5">
+                    <h2 class="section-title display-5 fw-bold mb-3" data-aos="fade-up">
+                        Get In Touch
+                    </h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                        Have questions? Ready to get started? Our team is here to help you every step of the way.
+                    </p>
+                </div>
+            </div>
+            <!-- Contact form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="contact-card bg-white rounded-4 p-4 p-lg-5 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <form id="contact-form" aria-label="Contact form">
+                            <div class="row g-3 g-lg-4">
+                                <!-- Name field -->
+                                <div class="col-12 col-md-6 form-row">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control form-control-lg rounded-3 px-4 py-3" id="name" name="name" placeholder="Your full name" aria-describedby="name-error" required>
+                                        <div class="form-icon position-absolute top-50 end-0 translate-middle-y me-4">
+                                            <i class="fas fa-user text-muted"></i>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="name-error"></div>
+                                </div>
+                                <!-- Email field -->
+                                <div class="col-12 col-md-6 form-row">
+                                    <div class="position-relative">
+                                        <input type="email" class="form-control form-control-lg rounded-3 px-4 py-3" id="email" name="email" placeholder="your.email@example.com" aria-describedby="email-error" required>
+                                        <div class="form-icon position-absolute top-50 end-0 translate-middle-y me-4">
+                                            <i class="fas fa-envelope text-muted"></i>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="email-error"></div>
+                                </div>
+                                <!-- Message field -->
+                                <div class="col-12 form-row">
+                                    <div class="position-relative">
+                                        <textarea class="form-control form-control-lg rounded-3 px-4 py-3" id="message" name="message" placeholder="Tell us about your business or how we can help..." aria-describedby="message-error" rows="5" required></textarea>
+                                        <div class="form-icon position-absolute top-15 end-0 translate-middle-y me-4">
+                                            <i class="fas fa-comment-dots text-muted"></i>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="message-error"></div>
+                                </div>
+                            </div>
+                            <!-- Form actions -->
+                            <div class="row mt-4">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold contact-submit-btn" id="submit-btn">
+                                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                                    </button>
+                                    <div class="loader mt-3 d-none" id="form-loader" aria-hidden="true">
+                                        <div class="spinner-border spinner-border-sm text-white" role="status">
+                                            <span class="visually-hidden">Sending...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Enhanced Footer - Multi-column with proper alignment -->
+    <footer class="footer bg-dark text-white" role="contentinfo">
+        <div class="container-fluid px-3 px-lg-4">
+            <!-- Main footer content -->
+            <div class="row py-5 g-4 g-lg-5">
+                <!-- Brand & Description -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-4 mb-lg-0">
+                        <a href="#home" class="logo d-inline-block mb-3" aria-label="Ubizo iMarket homepage">
+                            Ubizo <span class="logo-accent">iMarket</span>
+                        </a>
+                        <p class="footer-text lh-lg mb-0 opacity-75">
+                            Empowering local entrepreneurs across South Africa with seamless buying and selling. Join our community and grow your business today.
+                        </p>
+                        <div class="social-quick-links mt-4 d-flex gap-2">
+                            <a href="#" class="social-link btn btn-outline-light btn-sm rounded-circle p-2" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link btn btn-outline-light btn-sm rounded-circle p-2" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link btn btn-outline-light btn-sm rounded-circle p-2" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link btn btn-success btn-sm rounded-circle p-2" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title fw-semibold mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2">
+                            <a href="#home" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#how" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> How It Works
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#features" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Features
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#testimonials" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Testimonials
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Company Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title fw-semibold mb-3">Company</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> About Us
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Careers
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Press
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact & Legal -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="mb-4">
+                        <h5 class="footer-title fw-semibold mb-3">Contact Info</h5>
+                        <div class="contact-info">
+                            <div class="contact-item d-flex align-items-center mb-3">
+                                <i class="fas fa-envelope text-primary me-3 fs-5"></i>
+                                <a href="mailto:hello@ubizomarket.co.za" class="text-white-75 text-decoration-none">
+                                    hello@ubizomarket.co.za
+                                </a>
+                            </div>
+                            <div class="contact-item d-flex align-items-center mb-3">
+                                <i class="fas fa-phone text-primary me-3 fs-5"></i>
+                                <a href="tel:+27821234567" class="text-white-75 text-decoration-none">
+                                    +27 82 123 4567
+                                </a>
+                            </div>
+                            <div class="contact-item d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>
+                                <span class="text-white-75">Johannesburg, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="footer-title fw-semibold mb-3">Legal</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Privacy Policy
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-white-75 text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small opacity-50"></i> Cookie Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright footer -->
+            <div class="row border-top border-secondary border-opacity-25 pt-4 mt-4">
+                <div class="col-12 text-center">
+                    <p class="copyright mb-0 text-white-50 small">
+                        &copy; 2025 Ubizo iMarket. All rights reserved.
+                        <span class="d-none d-md-inline">Made with ❤️ in South Africa</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <button id="chatToggle" class="whatsapp-float position-fixed" aria-label="Toggle chat support" title="Chat with Ubizo support" type="button">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </button>
+    <!-- Chat Widget -->
+    <div id="chatbox" class="chatbox position-fixed" role="dialog" aria-label="Chat support" aria-hidden="true">
+        <div class="chat-header position-relative">
+            <div class="position-absolute top-50 start-3 translate-middle-y">
+                <i class="fas fa-comments text-white fs-5"></i>
+            </div>
+            <div class="text-center">
+                Ubizo iMarket - Chat Support
+            </div>
+            <button class="btn-close btn-close-white position-absolute top-50 end-3 translate-middle-y" type="button" aria-label="Close chat"></button>
+        </div>
+        <div id="chatBody" class="chat-body flex-grow-1">
+            <div class="chat-message bot">
+                👋 Hi there! How can we help you today?
+            </div>
+        </div>
+        <div class="chat-input d-flex">
+            <input id="chatInput" type="text" class="flex-grow-1" aria-label="Type your message" placeholder="Type a message...">
+            <button id="sendButton" type="button" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        // Ensure dark/light theme default
+        if (!document.body.dataset.theme) {
+            document.body.dataset.theme = 'light';
+        }
+    </script>
+</body>
+</html>

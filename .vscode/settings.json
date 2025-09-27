@@ -6,9 +6,11 @@
         "Clickability",
         "colour",
         "Csvg",
+        "describedby",
         "Flutterwave",
         "gunicorn",
         "jsonify",
+        "msapplication",
         "nltk",
         "numpy",
         "Paystack",
@@ -16,11 +18,14 @@
         "punkt",
         "signup",
         "Splide",
+        "stylesheet",
+        "tabindex",
         "Thabo",
         "torchvision",
         "Ubizo",
         "ubizoimarket",
-        "vercel"
+        "vercel",
+        "webp"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": []
