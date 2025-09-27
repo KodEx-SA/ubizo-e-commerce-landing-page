@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from chat import get_response
+from .chat import get_response
 import os
 
 app = Flask(__name__)
