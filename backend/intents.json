@@ -18,7 +18,7 @@
     {
       "tag": "support",
       "display_name": "Support",
-      "patterns": ["Help", "I need assistance", "Support", "How do I get help?", "Customer service?"],
+      "patterns": ["Help", "I need assistance", "Support", "How do I get help?", "Customer service?", "Services"],
       "responses": [
         "You can reach us anytime using the options below 👇"
       ],
@@ -31,7 +31,7 @@
     {
       "tag": "appointments",
       "display_name": "Appointments",
-      "patterns": ["Book appointment", "Schedule meeting", "I want to book", "Can I set an appointment?"],
+      "patterns": ["Book appointment", "Schedule meeting", "I want to book", "Can I set an appointment?", "Booking"],
       "responses": [
         "Sure! You can book an appointment below 👇"
       ],
@@ -42,7 +42,7 @@
     {
       "tag": "whatsapp_support",
       "display_name": "WhatsApp Support",
-      "patterns": ["Do you have WhatsApp?", "WhatsApp number?", "Can I chat on WhatsApp?", "Support on WhatsApp?", "WhatsApp contact?"],
+      "patterns": ["Do you have WhatsApp?", "WhatsApp number?", "Can I chat on WhatsApp?", "Support on WhatsApp?", "WhatsApp contact?", "WhatsApp?"],
       "responses": [
         "Yes! You can reach us on WhatsApp anytime 👇"
       ],
@@ -53,7 +53,7 @@
     {
       "tag": "social_media",
       "display_name": "Social Media",
-      "patterns": ["Do you have social media?", "Facebook page?", "Instagram account?", "Follow you online?", "Socials?"],
+      "patterns": ["Do you have social media?", "Facebook page?", "Instagram account?", "Follow you online?", "Socials?", "Facebook?", "Instagram?"],
       "responses": [
         "Follow us on social media 👇"
       ],
