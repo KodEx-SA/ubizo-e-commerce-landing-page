@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from chat import get_response
+from backend.chat import get_response
 import os
 
 app = Flask(__name__)
@@ -12,9 +12,9 @@ def home():
     # return jsonify({
     #     "message": "Welcome, I am your virtual assistant. How can I assist you today?",
     #     "options": [
-    #         {"label": "🛒 Start Shopping", "action": "navigate", "value": "/shop"},
-    #         {"label": "📦 Start Selling", "action": "navigate", "value": "/sell"},
-    #         {"label": "📞 Contact Support", "action": "intent", "value": "support"}
+    #         {"label": "Start Shopping", "action": "navigate", "value": "/shop"},
+    #         {"label": "Start Selling", "action": "navigate", "value": "/sell"},
+    #         {"label": "Contact Support", "action": "intent", "value": "support"}
     #     ]
     # })
 
